@@ -1,0 +1,299 @@
+/* De igual manera, gran parte del codigo utilizado en CSS es reutilizado o sigue
+los mismos patrones de diseño que proyectos anteriores. 
+Por lo que seria enormemente reiterativo y aumentaria mucho el tamaño del archivo de
+repetir las funciones de cada sentencia en CSS*/
+
+/* Establezco variables para escribir menos codigo y minimizar errores */
+:root{
+    --primary-color: #f6f5f5;
+    --secondary-color: #ee6f57;
+    --tertiary-color: #1f3c88;
+    --quaternary-color: #070d59;
+    --title-size: 4rem;
+    --subtitle-size: 2.2rem;
+    --body-size: 1.8rem;
+    --small-text-size: 1.4rem; 
+}
+/* Utilizo el selector universal y la etiqueta html para ajustar
+los parametros de margen, padding, box sizing y el tamano al que hara referencia
+em y rem */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+.title{
+    font-size: var(--title-size);
+    color: var(--tertiary-color);
+}
+/* Establezco estilos, tales como tamano de fuente, 
+color, margenes, padding, etc a las diferentes estructuras */
+.subtitle{
+    font-size: var(--subtitle-size);
+    color: var(--secondary-color);
+    margin: 2rem;
+}
+
+.main-body{
+    font-size: var(--body-size);
+}
+
+/* Establezco estilos al header del sitio web */
+.header-main-header{
+    display: flex;
+    padding: 3rem;
+    background-color: salmon;
+    width: 100%;
+    border-radius: 1rem;
+}
+.header-main-nav{
+    display: flex;
+    justify-content: start;
+    width: 50%;
+}
+.header-main-nav__ul{
+    list-style: none;
+}
+.header-main-nav__li{
+    display: inline-block;
+    font-size: var(--body-size);
+    
+}
+
+.header-main-nav__li a{
+    color: white;
+    text-decoration: none;
+    background-color: var(--tertiary-color);
+    padding: 1rem;
+    border-radius: 5rem;
+
+}
+
+.header-social-media-nav{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.header-social-media-nav__ul{
+    list-style: none;
+}
+
+.header-social-media-nav__li{
+    display: inline-block;
+    font-size: var(--body-size);
+}
+
+.header-social-media-nav__li a{
+    color: white;
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 5rem;
+}
+
+.header-img{
+    width: 100%;
+    justify-content: center;
+}
+
+.header-img img{
+    width: 100%;
+    object-fit: none;    
+    height: 15rem;  
+}
+
+.header-img__figure{
+    width: 100%;
+}
+/* Escribo estilos al main de la pagina web */
+
+.main-title{
+    width: 100%;
+    height: 15rem;
+    position: absolute;
+    display: block;
+    text-align: center;
+    margin-top: 4rem;
+    -webkit-text-stroke: 1px white;
+    color: black;
+
+}
+
+.header-task-bar{
+    width: 100%;
+    background-color: black;
+}
+.header-task-bar__ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.header-task-bar__li{
+    display: inline-block;
+    margin: 2rem;
+    padding:1rem;
+    font-size: var(--subtitle-size);
+}
+
+.header-task-bar__li a{
+    color: white;
+    text-decoration: none;
+}
+.main-content{
+    display: flex;
+    width: 100%;
+    padding: 2rem;
+}
+
+.main-travel-container{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.main-travel-box{
+    width: 45%;
+    display: inline-block;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+.travel-box__figure{
+    width: 100%;
+}
+
+.travel-box__img{
+    width: 100%;
+    object-fit: none;    
+    height: 40rem;
+    border-radius: 2rem;
+}
+/* Escribo estilos al aside de la pagina web */
+.aside-bar{
+    width: 20%;
+    background-color: var(--tertiary-color);
+    border-radius: 3rem;
+    padding: 2rem;
+}
+
+.aside-bar-box{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.ad-body{
+    font-size: var(--body-size);
+    color: var(--primary-color);
+}
+.ad-social-media-img{
+    width: 70%;
+}
+/* Establezco estils a los diferentes botones y estructuras de aside */
+.btn{
+    padding: 1rem;
+    background-color: var(--quaternary-color);
+    color: var(--primary-color);
+    font-size: var(--body-size);
+    border-radius: 2rem;
+    margin: 1rem;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+.btn a{
+    color: white;
+}
+.sign-up-form-form{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
+
+.input{
+    display: block;
+}
+.ad-title{
+    font-size:3rem;
+    color: var(--primary-color);
+}
+.ad-img{
+    object-fit: none;    
+    height: 20rem;
+    width: 90%;
+    border-radius: 2rem;
+}
+/* Establezco estilos de footer de la pagina web */
+footer{
+    width: 100%;
+    background-color: var(--quaternary-color);
+    border-radius: 2rem;
+}
+
+.main-footer{
+    text-align: center;
+    display: flex;
+}
+
+.main-footer__section{
+    width: 30%;
+    margin-bottom: 3rem;
+    margin: auto auto;
+}
+
+.footer-title{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 3rem;
+    color: var(--primary-color);
+}
+
+.footer-subtitle{
+    font-size: var(--subtitle-size);
+    text-align: center;
+    color: var(--secondary-color);
+    padding: 2rem;
+}
+
+.footer-body{
+    font-size: var(--body-size);
+    color: white;
+}
+
+.footer-copyright{
+    margin-left: 5rem;
+    font-size: var(--small-text-size);
+    margin-top: 5rem;
+    color: white;
+}
+
+.footer-social-media{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social-media__list{
+    list-style: none;
+}
+
+.footer-social-media__item{
+    display: inline-block;
+    background-color: var(--tertiary-color);
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    font-size: var(--subtitle-size);
+    margin-bottom: 5rem;
+}
+
+.footer-social-media__item a{
+    color: white;
+    text-decoration: none;
+}
